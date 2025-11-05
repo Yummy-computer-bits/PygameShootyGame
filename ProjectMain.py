@@ -49,12 +49,16 @@ while True:
             sys.exit()  # exits the program
 
         if event.type == pygame.MOUSEBUTTONDOWN: # Checks for ANY mouse clicks
+
+#--------------------------------------------------------------------
+            #Menu Clicks
             if State == "Menu": # Below are ONLY menu screen actions
                 if start.collidepoint(mouse): # if click start button
-                    State = "Game" # State shifts to gameplay
-                    #should clear all buttons and text objects
+                    State = "Game" # State shifts to gameplay (kills use of menu buttons)
+                    Window.fill(White) # Clears screen of menu buttons
                 elif close.collidepoint(mouse): # if click quit button
                     pygame.quit() # exit pygame
                     sys.exit() # exit python
+#---------------------------------------------------------------------
 
     pygame.display.update()  # refreshes the window

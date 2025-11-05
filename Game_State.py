@@ -27,7 +27,6 @@ def quitbutton(White, Black, Window, Font):
 
     return close
 
-
 def gamestate(State, White, Black, Window, Font):  # is called whenever game over condition may be met, or to launch menu
     if State == "Menu":  # creates start or exit buttons once the state is MENU
 
