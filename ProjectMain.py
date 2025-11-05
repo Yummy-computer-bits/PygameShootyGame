@@ -3,6 +3,7 @@
 import sys  # imports the sys library
 import pygame  # imports the pygame library
 import Game_State
+import Time_Module
 
 pygame.init()  # initialises ALL imported pygame modules (the constructor)
 
@@ -34,7 +35,7 @@ if State == "Menu": # MENU SCREEN
     Game_State.gamestate(State, White, Black, Window, Font)  # Calls game state with State string, colours and global font as arguments
 
     start = Game_State.startbutton(White, Black, Window, Font)  # calls startbutton function. this creates the startbutton, text and border
-    close = Game_State.quitbutton(White, Black, Window, Font)  # calls quitbutton function. this creates the quitbutton, text and border
+    close = Game_State.quitbutton(White, Black, Window, Font)  # calls quitbutton function. this creates the quitbutton, text and border)
 # ----------------------------------------------------------------------------------------------
 #EVENT HANDLER
 while True:
@@ -54,7 +55,7 @@ while True:
             #Menu Clicks
             if State == "Menu": # Below are ONLY menu screen actions
                 if start.collidepoint(mouse): # if click start button
-                    State = "Game" # State shifts to gameplay (kills use of menu buttons)
+                    Game_State.setgame() # State shifts to gameplay (kills use of menu buttons, and runs gameplay modules)
                     Window.fill(White) # Clears screen of menu buttons
                 elif close.collidepoint(mouse): # if click quit button
                     pygame.quit() # exit pygame

@@ -1,6 +1,7 @@
 # ----------------------------------------------------------------------------------------------
 #GAME STATE FUNCTION
 import pygame  # imports the pygame library
+import Time_Module
 def startbutton(White, Black, Window, Font):
 
     start = pygame.Rect(150, 250, 200, 100)  # Start button, rect(left, top, width, height)
@@ -26,6 +27,11 @@ def quitbutton(White, Black, Window, Font):
     Window.blit(closewords, (470, 290))
 
     return close
+
+def setgame():
+    State = "game"
+    Time_Module.countdown()
+    print(State)
 
 def gamestate(State, White, Black, Window, Font):  # is called whenever game over condition may be met, or to launch menu
     if State == "Menu":  # creates start or exit buttons once the state is MENU
