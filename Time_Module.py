@@ -1,6 +1,12 @@
+import pygame
 def countdown(Font, Black, Window):
-    TimeLetters = Font.render(STRcurrent, False, Black)
-    Window.blit(TimeLetters, (200,400))
-
-Current = 60
-STRcurrent = str(Current)
+    Current = 60
+    STRcurrent = "60"
+    while Current != 0:
+        timeletters = Font.render(STRcurrent, False, Black)
+        Window.blit(timeletters,(700,50))
+        #Current -= 1
+        #STRcurrent = str(Current)
+        clearnumber = pygame.Rect(700, 50, 40, 40)
+        pygame.draw.rect(Window, ((Black)), clearnumber, 1)
+        Current = 0
