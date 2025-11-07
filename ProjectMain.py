@@ -55,8 +55,9 @@ while True:
             #Menu Clicks
             if State == "Menu": # Below are ONLY menu screen actions
                 if start.collidepoint(mouse): # if click start button
-                    Game_State.setgame() # State shifts to gameplay (kills use of menu buttons, and runs gameplay modules)
                     Window.fill(White) # Clears screen of menu buttons
+                    State = "Game"
+                    Game_State.setgame(Font, Black, Window) # State shifts to gameplay (kills use of menu buttons, and runs gameplay modules)
                 elif close.collidepoint(mouse): # if click quit button
                     pygame.quit() # exit pygame
                     sys.exit() # exit python

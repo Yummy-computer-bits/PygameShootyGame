@@ -2,6 +2,7 @@
 #GAME STATE FUNCTION
 import pygame  # imports the pygame library
 import Time_Module
+#CREATE MAIN MENU-------------------------------------------------------------------------------
 def startbutton(White, Black, Window, Font):
 
     start = pygame.Rect(150, 250, 200, 100)  # Start button, rect(left, top, width, height)
@@ -28,13 +29,12 @@ def quitbutton(White, Black, Window, Font):
 
     return close
 
-def setgame():
-    State = "game"
-    Time_Module.countdown()
-    print(State)
-
 def gamestate(State, White, Black, Window, Font):  # is called whenever game over condition may be met, or to launch menu
     if State == "Menu":  # creates start or exit buttons once the state is MENU
 
         titlewords = Font.render("PLATFORMS AND ALIENS", False, White) # creates surface for title screen words
         Window.blit(titlewords, (225, 100)) # draws title screen words on the screen
+#CALL GAMEPLAY MODULES
+def setgame(Font, Black, Window):
+    State = "game"
+    Time_Module.countdown(Font, Black, Window)
