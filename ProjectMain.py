@@ -62,5 +62,4 @@ while True:
                     pygame.quit() # exit pygame
                     sys.exit() # exit python
 #---------------------------------------------------------------------
-
     pygame.display.update()  # refreshes the window

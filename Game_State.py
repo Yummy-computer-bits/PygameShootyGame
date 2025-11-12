@@ -37,4 +37,5 @@ def gamestate(State, White, Black, Window, Font):  # is called whenever game ove
 #CALL GAMEPLAY MODULES
 def setgame(Font, Black, Window):
     State = "game"
+    pygame.display.update() #refreshes the window now the main menu needs to disappear
     Time_Module.countdown(Font, Black, Window)
