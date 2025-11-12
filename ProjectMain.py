@@ -12,6 +12,9 @@ White = (255, 255, 255)  # stores the colour white
 Black = (0,0,0)
 Blue = (0,0,255)
 
+#INITIAL CURRENT TIME
+Current = 60
+
 #GLOBAL FONT
 Font = pygame.font.SysFont(None, 40, False, False)  # creates font and size
 
@@ -28,6 +31,12 @@ Window = pygame.display.set_mode(
 pygame.display.set_caption("Platforms and aliens")  # renames the window to the name of the game
 
 clock = pygame.time.Clock()  # creates object clock which tracks time
+#-----------------------------------------------------------------------------------------------
+#Decrease time
+Decrease = pygame.USEREVENT
+
+pygame.time.set_timer(Decrease, 1000)
+
 #-----------------------------------------------------------------------------------------------
 #GAME STATE
 if State == "Menu": # MENU SCREEN
@@ -49,15 +58,23 @@ while True:
             pygame.quit()  # kills the game window
             sys.exit()  # exits the program
 
+        if event.type == Decrease and State == "Game" and Current != -1:
+            Time_Module.countdown(Font, Black, Window, Current)
+            Current -= 1
+            #if Current == 0: #This will trigger the gameover condition once i have written it
+                #Game_State.Gameover()
+
         if event.type == pygame.MOUSEBUTTONDOWN: # Checks for ANY mouse clicks
 
 #--------------------------------------------------------------------
             #Menu Clicks
             if State == "Menu": # Below are ONLY menu screen actions
+
                 if start.collidepoint(mouse): # if click start button
                     Window.fill(White) # Clears screen of menu buttons
-                    State = "Game"
-                    Game_State.setgame(Font, Black, Window) # State shifts to gameplay (kills use of menu buttons, and runs gameplay modules)
+                    State = "Game" # State shifts to gameplay (kills use of menu buttons, and runs gameplay modules)
+                    pygame.display.update()  # refreshes the window now the main menu needs to disappear
+
                 elif close.collidepoint(mouse): # if click quit button
                     pygame.quit() # exit pygame
                     sys.exit() # exit python
