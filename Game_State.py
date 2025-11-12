@@ -24,8 +24,8 @@ def quitbutton(White, Black, Window, Font):
     pygame.draw.rect(Window, White, close, 0)  # draw quit button
     pygame.draw.rect(Window, Black, closeborder, 10)  # draw a border around quit button
 
-    closewords = Font.render("QUIT GAME", False, Black)
-    Window.blit(closewords, (470, 290))
+    closewords = Font.render("QUIT GAME", False, Black) #creates surface with text
+    Window.blit(closewords, (470, 290)) # draws the closewords surface on surface window with parameters x.y
 
     return close
 
