@@ -61,7 +61,7 @@ while True:
         if event.type == Decrease and State == "Game" and Current != -1:
             Time_Module.countdown(Font, Black, Window, Current)
             Current -= 1
-            #if Current == 0: #This will trigger the gameover condition once i have written it
+           # if Current == -1: #This will trigger the gameover condition once i have written it
                 #Game_State.Gameover()
 
         if event.type == pygame.MOUSEBUTTONDOWN: # Checks for ANY mouse clicks
