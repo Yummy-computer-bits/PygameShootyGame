@@ -72,16 +72,18 @@ while True:
         #Player movement
         if event.type == pygame.KEYDOWN: # Move right
             if event.key == pygame.K_RIGHT:
+                pygame.key.set_repeat(100, 0)
                 print("RIGHT")
 
         if event.type == pygame.KEYDOWN: # Move left
             if event.key == pygame.K_LEFT:
+                pygame.key.set_repeat(100, 0)
                 print("LEFT")
 
         if event.type == pygame.KEYDOWN: # Jump
             if event.key == pygame.K_SPACE:
+                pygame.key.set_repeat(0, 0)
                 print("SPACE")
-
 
         if event.type == pygame.MOUSEBUTTONDOWN: # Checks for ANY mouse clicks
 
