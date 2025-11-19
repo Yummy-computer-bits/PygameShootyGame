@@ -2,6 +2,8 @@
 # GLOBAL VARIABLES AND LIBRARIES
 import sys  # imports the sys library
 import pygame  # imports the pygame library
+from pygame import K_EURO, K_RIGHT
+
 import Game_State
 import Time_Module
 
@@ -31,6 +33,10 @@ Window = pygame.display.set_mode(
 pygame.display.set_caption("Platforms and aliens")  # renames the window to the name of the game
 
 clock = pygame.time.Clock()  # creates object clock which tracks time
+#-----------------------------------------------------------------------------------------------
+#Import sprites
+
+#Create Class "Player"
 #-----------------------------------------------------------------------------------------------
 #Decrease time
 Decrease = pygame.USEREVENT
@@ -63,6 +69,19 @@ while True:
             Current -= 1
            # if Current == -1: #This will trigger the gameover condition once i have written it
                 #Game_State.Gameover()
+        #Player movement
+        if event.type == pygame.KEYDOWN: # Move right
+            if event.key == pygame.K_RIGHT:
+                print("RIGHT")
+
+        if event.type == pygame.KEYDOWN: # Move left
+            if event.key == pygame.K_LEFT:
+                print("LEFT")
+
+        if event.type == pygame.KEYDOWN: # Jump
+            if event.key == pygame.K_SPACE:
+                print("SPACE")
+
 
         if event.type == pygame.MOUSEBUTTONDOWN: # Checks for ANY mouse clicks
 
