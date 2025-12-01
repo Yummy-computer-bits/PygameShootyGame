@@ -34,9 +34,18 @@ pygame.display.set_caption("Platforms and aliens")  # renames the window to the 
 
 clock = pygame.time.Clock()  # creates object clock which tracks time
 #-----------------------------------------------------------------------------------------------
-#Import sprites
-
 #Create Class "Player"
+class Knight:
+    def __init__(self):
+        self.Knightsprite = pygame.image.load("knightsprite.png")  # Creates surface Playersprite with image knightsprite.png
+        pygame.Surface.convert_alpha(self.Knightsprite)  # puts surface in a format suitable for quick blitting (movement)
+        self.KnightHitbox = pygame.Rect(300,400,50,75)
+        self.Knight_X = 300
+        self.Knight_Y = 400
+        #self.Player_Position = "find centre of sprite png"
+
+Player = Knight() # creates object player from class Knight
+
 #-----------------------------------------------------------------------------------------------
 #Decrease time
 Decrease = pygame.USEREVENT
@@ -58,6 +67,9 @@ while True:
     clock.tick(60)  # at most 60 frames should pass in a second (FPS cap)
     mouse = pygame.mouse.get_pos()
 
+    # Set keys to be held by default (SPACE exempt)
+    pygame.key.set_repeat(100)
+
     for event in pygame.event.get():  # event handler: any user driven event is listed under here
 
         if event.type == pygame.QUIT:  # if the "X" on the window is clicked
@@ -67,23 +79,28 @@ while True:
         if event.type == Decrease and State == "Game" and Current != -1:
             Time_Module.countdown(Font, Black, Window, Current)
             Current -= 1
-           # if Current == -1: #This will trigger the gameover condition once i have written it
+           # if Current == -1: #This will trigger the gameover condition once I have written it
                 #Game_State.Gameover()
+
         #Player movement
-        if event.type == pygame.KEYDOWN: # Move right
-            if event.key == pygame.K_RIGHT:
-                pygame.key.set_repeat(100, 0)
-                print("RIGHT")
 
-        if event.type == pygame.KEYDOWN: # Move left
-            if event.key == pygame.K_LEFT:
-                pygame.key.set_repeat(100, 0)
-                print("LEFT")
+        if State == "Game": #things will happen during gameplay
+            if event.type == pygame.KEYDOWN: # Move right
+                if event.key == pygame.K_RIGHT:
+                    Player.Knight_X += 20
 
-        if event.type == pygame.KEYDOWN: # Jump
-            if event.key == pygame.K_SPACE:
-                pygame.key.set_repeat(0, 0)
-                print("SPACE")
+            if event.type == pygame.KEYDOWN: # Move left
+                if event.key == pygame.K_LEFT:
+                    Left = list()
+                    Left.append("LEFT")
+                    #print("LEFT")
+                    for x in Left:
+                        Player.Knight_X -= 20
+
+            if event.type == pygame.KEYUP: # Jump
+                if event.key == pygame.K_SPACE:
+                    print("SPACE")
+            Window.blit(Player.Knightsprite, (Player.Knight_X, Player.Knight_Y))  # initial sprite draw
 
         if event.type == pygame.MOUSEBUTTONDOWN: # Checks for ANY mouse clicks
 
