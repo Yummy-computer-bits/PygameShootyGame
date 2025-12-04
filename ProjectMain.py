@@ -1,6 +1,8 @@
 # ----------------------------------------------------------------------------------------------
 # GLOBAL VARIABLES AND LIBRARIES
 import sys  # imports the sys library
+from shutil import which
+
 import pygame  # imports the pygame library
 from pygame import K_EURO, K_RIGHT
 
@@ -27,8 +29,7 @@ State = "Menu"  # sets the state to "Menu" when the game opens for the first tim
 
 SCREEN_WIDTH, SCREEN_HEIGHT = (800, 600)  # a tuple which will dictate window dimensions
 
-Window = pygame.display.set_mode(
-    (SCREEN_WIDTH, SCREEN_HEIGHT))  # creates object window with parameters for window width and height
+Window = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))  # creates object window with parameters for window width and height
 
 pygame.display.set_caption("Platforms and aliens")  # renames the window to the name of the game
 
@@ -39,10 +40,22 @@ class Knight:
     def __init__(self):
         self.Knightsprite = pygame.image.load("knightsprite.png")  # Creates surface Playersprite with image knightsprite.png
         pygame.Surface.convert_alpha(self.Knightsprite)  # puts surface in a format suitable for quick blitting (movement)
-        self.KnightHitbox = pygame.Rect(300,400,50,75)
         self.Knight_X = 300
         self.Knight_Y = 400
+        self.KnightHitbox = pygame.Rect(self.Knight_X, self.Knight_Y, 50, 75)
         #self.Player_Position = "find centre of sprite png"
+
+    def draw(self): # a method that redraws the player sprite
+        Window.blit(Player.Knightsprite, (Player.Knight_X, Player.Knight_Y))
+
+    def move(self): # allows the user to control the player sprite
+        kbin = pygame.key.get_pressed() #event kbin (K-ey B-oard + IN-put) is triggered after a keyboard input
+        if kbin[pygame.K_LEFT]: # should the keyboard input be the LEFT arrow key
+            self.Knight_X -= 1
+            left = True
+        if kbin[pygame.K_RIGHT]:
+            self.Knight_X += 1
+            left = False
 
 Player = Knight() # creates object player from class Knight
 
@@ -65,10 +78,15 @@ if State == "Menu": # MENU SCREEN
 while True:
 
     clock.tick(60)  # at most 60 frames should pass in a second (FPS cap)
-    mouse = pygame.mouse.get_pos()
+    mouse = pygame.mouse.get_pos() # gets the mouse position at all times
 
-    # Set keys to be held by default (SPACE exempt)
-    pygame.key.set_repeat(100)
+    #player movement
+    if State == "Game": #movement only exists during gameplay
+        Player.move()  # calls the method that lets the user control the player sprite
+
+        Window.fill(White)  # fills the screen with white pixels
+        Time_Module.countdown(Font, Black, Window, Current)  # re-draws the time on the screen
+        Player.draw()  # the sprite is drawn from the class definition
 
     for event in pygame.event.get():  # event handler: any user driven event is listed under here
 
@@ -81,26 +99,6 @@ while True:
             Current -= 1
            # if Current == -1: #This will trigger the gameover condition once I have written it
                 #Game_State.Gameover()
-
-        #Player movement
-
-        if State == "Game": #things will happen during gameplay
-            if event.type == pygame.KEYDOWN: # Move right
-                if event.key == pygame.K_RIGHT:
-                    Player.Knight_X += 20
-
-            if event.type == pygame.KEYDOWN: # Move left
-                if event.key == pygame.K_LEFT:
-                    Left = list()
-                    Left.append("LEFT")
-                    #print("LEFT")
-                    for x in Left:
-                        Player.Knight_X -= 20
-
-            if event.type == pygame.KEYUP: # Jump
-                if event.key == pygame.K_SPACE:
-                    print("SPACE")
-            Window.blit(Player.Knightsprite, (Player.Knight_X, Player.Knight_Y))  # initial sprite draw
 
         if event.type == pygame.MOUSEBUTTONDOWN: # Checks for ANY mouse clicks
 

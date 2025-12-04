@@ -8,4 +8,3 @@ def countdown(Font, Black, Window, Current):
     STRcurrent = str(Current) # typecasts current into a seperate variable as a string
     timeletters = Font.render(STRcurrent, False, Black)  # RE-declares surface timeletters (it doesnt automatically update!)
     Window.blit(timeletters, (700, 50))  # draws surface timeletters on surface window
-    pygame.display.update() #refreshes the window
