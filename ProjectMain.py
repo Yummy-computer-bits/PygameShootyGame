@@ -38,33 +38,55 @@ clock = pygame.time.Clock()  # creates object clock which tracks time
 #Create Class "Player"
 class Knight:
     def __init__(self):
-        self.Knightsprite = pygame.image.load("knightsprite.png")  # Creates surface Playersprite with image knightsprite.png
+        self.Knightsprite = pygame.image.load("knightsprite.png")  # Creates surface Knightsprite with image knightsprite.png
+       # self.LeftKnightsprite = pygame.image.load("Leftknightsprite.png") # Creates surface LeftKnightsprite with image Leftknightsprite.png
         pygame.Surface.convert_alpha(self.Knightsprite)  # puts surface in a format suitable for quick blitting (movement)
+        #pygame.Surface.convert_alpha(self.LeftKnightsprite)  # puts surface in a format suitable for quick blitting (movement)
         self.Knight_X = 300
         self.Knight_Y = 400
         self.KnightHitbox = pygame.Rect(self.Knight_X, self.Knight_Y, 50, 75)
         #self.Player_Position = "find centre of sprite png"
 
+
     def draw(self): # a method that redraws the player sprite
         Window.blit(Player.Knightsprite, (Player.Knight_X, Player.Knight_Y))
+
+        # Turn the sprite face around attempt #1
+       # left = Knight.move(self)
+        #print(left)
+        #if left:
+         #   Window.blit(Player.LeftKnightsprite, (Player.Knight_X, Player.Knight_Y))
+          #  last = Player.LeftKnightsprite, (Player.Knight_X, Player.Knight_Y)
+           # return last
+        #elif left == False:
+         #   Window.blit(Player.Knightsprite, (Player.Knight_X, Player.Knight_Y))
+          #  last = Player.Knightsprite, (Player.Knight_X, Player.Knight_Y)
+           # return last
+       # elif left != False and left != True:
+        #    last
+
 
     def move(self): # allows the user to control the player sprite
         kbin = pygame.key.get_pressed() #event kbin (K-ey B-oard + IN-put) is triggered after a keyboard input
         if kbin[pygame.K_LEFT]: # should the keyboard input be the LEFT arrow key
-            self.Knight_X -= 1
+            self.Knight_X -= 10
             left = True
+            return left
         if kbin[pygame.K_RIGHT]:
-            self.Knight_X += 1
+            self.Knight_X += 10
             left = False
+            return left
 
 Player = Knight() # creates object player from class Knight
+
+#DEFAULT SPRITE VALUES
+left = False
 
 #-----------------------------------------------------------------------------------------------
 #Decrease time
 Decrease = pygame.USEREVENT
 
 pygame.time.set_timer(Decrease, 1000)
-
 #-----------------------------------------------------------------------------------------------
 #GAME STATE
 if State == "Menu": # MENU SCREEN
@@ -74,20 +96,21 @@ if State == "Menu": # MENU SCREEN
     start = Game_State.startbutton(White, Black, Window, Font)  # calls startbutton function. this creates the startbutton, text and border
     close = Game_State.quitbutton(White, Black, Window, Font)  # calls quitbutton function. this creates the quitbutton, text and border)
 # ----------------------------------------------------------------------------------------------
-#EVENT HANDLER
+#Gameplay Loop
 while True:
-
     clock.tick(60)  # at most 60 frames should pass in a second (FPS cap)
     mouse = pygame.mouse.get_pos() # gets the mouse position at all times
 
     #player movement
     if State == "Game": #movement only exists during gameplay
+
         Player.move()  # calls the method that lets the user control the player sprite
 
         Window.fill(White)  # fills the screen with white pixels
         Time_Module.countdown(Font, Black, Window, Current)  # re-draws the time on the screen
         Player.draw()  # the sprite is drawn from the class definition
 
+    #Event Handler
     for event in pygame.event.get():  # event handler: any user driven event is listed under here
 
         if event.type == pygame.QUIT:  # if the "X" on the window is clicked
@@ -109,6 +132,7 @@ while True:
                 if start.collidepoint(mouse): # if click start button
                     Window.fill(White) # Clears screen of menu buttons
                     State = "Game" # State shifts to gameplay (kills use of menu buttons, and runs gameplay modules)
+
                     pygame.display.update()  # refreshes the window now the main menu needs to disappear
 
                 elif close.collidepoint(mouse): # if click quit button
