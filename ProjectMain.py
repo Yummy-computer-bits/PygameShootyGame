@@ -39,48 +39,26 @@ clock = pygame.time.Clock()  # creates object clock which tracks time
 class Knight:
     def __init__(self):
         self.Knightsprite = pygame.image.load("knightsprite.png")  # Creates surface Knightsprite with image knightsprite.png
-       # self.LeftKnightsprite = pygame.image.load("Leftknightsprite.png") # Creates surface LeftKnightsprite with image Leftknightsprite.png
         pygame.Surface.convert_alpha(self.Knightsprite)  # puts surface in a format suitable for quick blitting (movement)
-        #pygame.Surface.convert_alpha(self.LeftKnightsprite)  # puts surface in a format suitable for quick blitting (movement)
         self.Knight_X = 300
         self.Knight_Y = 400
-        self.KnightHitbox = pygame.Rect(self.Knight_X, self.Knight_Y, 50, 75)
-        #self.Player_Position = "find centre of sprite png"
-
 
     def draw(self): # a method that redraws the player sprite
-        Window.blit(Player.Knightsprite, (Player.Knight_X, Player.Knight_Y))
-
-        # Turn the sprite face around attempt #1
-       # left = Knight.move(self)
-        #print(left)
-        #if left:
-         #   Window.blit(Player.LeftKnightsprite, (Player.Knight_X, Player.Knight_Y))
-          #  last = Player.LeftKnightsprite, (Player.Knight_X, Player.Knight_Y)
-           # return last
-        #elif left == False:
-         #   Window.blit(Player.Knightsprite, (Player.Knight_X, Player.Knight_Y))
-          #  last = Player.Knightsprite, (Player.Knight_X, Player.Knight_Y)
-           # return last
-       # elif left != False and left != True:
-        #    last
-
+        Window.blit(Player.Knightsprite, (Player.Knight_X, Player.Knight_Y)) # draws the player sprite every frame with updated x and y positions
+        pygame.draw.rect(Window, Blue, (self.Knight_X +10, self.Knight_Y +5, 30, 70), 1) # draws the player sprite hitbox every frame with updated x and y positions
 
     def move(self): # allows the user to control the player sprite
+
         kbin = pygame.key.get_pressed() #event kbin (K-ey B-oard + IN-put) is triggered after a keyboard input
         if kbin[pygame.K_LEFT]: # should the keyboard input be the LEFT arrow key
             self.Knight_X -= 10
-            left = True
-            return left
         if kbin[pygame.K_RIGHT]:
             self.Knight_X += 10
-            left = False
-            return left
 
 Player = Knight() # creates object player from class Knight
 
-#DEFAULT SPRITE VALUES
-left = False
+#-----------------------------------------------------------------------------------------------
+#Create Class "Platform"
 
 #-----------------------------------------------------------------------------------------------
 #Decrease time
@@ -139,4 +117,4 @@ while True:
                     pygame.quit() # exit pygame
                     sys.exit() # exit python
 #---------------------------------------------------------------------
-    pygame.display.update()  # refreshes the window
+    pygame.display.update()  # refreshes the window at the end of every while loop

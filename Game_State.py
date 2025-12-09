@@ -35,6 +35,10 @@ def gamestate(State, White, Black, Window, Font):  # is called whenever game ove
         titlewords = Font.render("PLATFORMS AND ALIENS", False, White) # creates surface for title screen words
         Window.blit(titlewords, (225, 100)) # draws title screen words on the screen
 
+# Gameover Routine
+#def Gameover():
+    # a surprise tool that'll help us later!!
+
 #CALL GAMEPLAY MODULES # not in use. currently easier to change state at incidence of state change. might use later
 #def setgame():
  #   State = "Game"

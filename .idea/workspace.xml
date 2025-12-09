@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3522de32-f343-4b2e-bc5e-51763fc91bff" name="Changes" comment="wow that was really cool">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PythonProject.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_State.py" beforeDir="false" afterPath="$PROJECT_DIR$/Game_State.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectMain.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectMain.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Yummy-computer-bits&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Yummy-computer-bits/JumpyShootyGame.git&quot;,
+    &quot;accountId&quot;: &quot;8f875d22-ac8d-4955-856d-60fa62966eef&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="33CN2ER8VlFtCx0R4HOr80BWOKW" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.Game_State.executor": "Run",
+    "Python.Initialise and Event Handler.executor": "Run",
+    "Python.ProjectMain.executor": "Run",
+    "Python.Time_Module.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.melting.executor": "Run",
+    "Python.test.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Shell Script.Unnamed.executor": "Run",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/michael/.local/bin/uv",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "uv run.Run Project.executor": "Run",
+    "uv run.Unnamed.executor": "Run",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Shell Script.Run Project">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="PythonProject" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Run Project" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$USER_HOME$/.local/bin/uv" />
+      <option name="SCRIPT_OPTIONS" value="run ProjectMain.py" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.main" />
+      <item itemvalue="Shell Script.Run Project" />
+    </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-b3d66beaba9a-c6efb3732140-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.26199.168" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3522de32-f343-4b2e-bc5e-51763fc91bff" name="Changes" comment="" />
+      <created>1758816884770</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1758816884770</updated>
+      <workItem from="1758816885955" duration="279000" />
+    </task>
+    <task id="LOCAL-00001" summary="aaaaaaaaahaaaaaahhh">
+      <option name="closed" value="true" />
+      <created>1759920777815</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1759920777815</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Yay">
+      <option name="closed" value="true" />
+      <created>1762343428582</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1762343428582</updated>
+    </task>
+    <task id="LOCAL-00003" summary="wow that was really cool">
+      <option name="closed" value="true" />
+      <created>1762356075072</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1762356075072</updated>
+    </task>
+    <task id="LOCAL-00004" summary="wow that was really cool">
+      <option name="closed" value="true" />
+      <created>1762507605038</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1762507605038</updated>
+    </task>
+    <task id="LOCAL-00005" summary="wow that was really cool">
+      <option name="closed" value="true" />
+      <created>1762510507996</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1762510507996</updated>
+    </task>
+    <task id="LOCAL-00006" summary="wow that was really cool">
+      <option name="closed" value="true" />
+      <created>1762510516870</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1762510516870</updated>
+    </task>
+    <task id="LOCAL-00007" summary="wow that was really cool">
+      <option name="closed" value="true" />
+      <created>1762949167133</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1762949167133</updated>
+    </task>
+    <task id="LOCAL-00008" summary="wow that was really cool">
+      <option name="closed" value="true" />
+      <created>1762957826749</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1762957826749</updated>
+    </task>
+    <task id="LOCAL-00009" summary="wow that was really cool">
+      <option name="closed" value="true" />
+      <created>1762959586146</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1762959586146</updated>
+    </task>
+    <task id="LOCAL-00010" summary="wow that was really cool">
+      <option name="closed" value="true" />
+      <created>1763038330042</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1763038330042</updated>
+    </task>
+    <task id="LOCAL-00011" summary="wow that was really cool">
+      <option name="closed" value="true" />
+      <created>1763543367536</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1763543367536</updated>
+    </task>
+    <task id="LOCAL-00012" summary="wow that was really cool">
+      <option name="closed" value="true" />
+      <created>1763549178730</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1763549178730</updated>
+    </task>
+    <task id="LOCAL-00013" summary="wow that was really cool">
+      <option name="closed" value="true" />
+      <created>1764589528996</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1764589528996</updated>
+    </task>
+    <task id="LOCAL-00014" summary="wow that was really cool">
+      <option name="closed" value="true" />
+      <created>1764854490309</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1764854490309</updated>
+    </task>
+    <task id="LOCAL-00015" summary="wow that was really cool">
+      <option name="closed" value="true" />
+      <created>1765052080407</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1765052080407</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="aaaaaaaaahaaaaaahhh" />
+    <MESSAGE value="Yay" />
+    <MESSAGE value="wow that was really cool" />
+    <option name="LAST_COMMIT_MESSAGE" value="wow that was really cool" />
+  </component>
+</project>
