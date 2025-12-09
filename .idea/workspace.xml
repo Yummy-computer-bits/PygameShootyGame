@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3522de32-f343-4b2e-bc5e-51763fc91bff" name="Changes" comment="wow that was really cool">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PythonProject.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="3522de32-f343-4b2e-bc5e-51763fc91bff" name="Changes" comment="uv">
+      <change afterPath="$PROJECT_DIR$/beans.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game_State.py" beforeDir="false" afterPath="$PROJECT_DIR$/Game_State.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectMain.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectMain.py" afterDir="false" />
     </list>
@@ -51,28 +49,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.Game_State.executor": "Run",
-    "Python.Initialise and Event Handler.executor": "Run",
-    "Python.ProjectMain.executor": "Run",
-    "Python.Time_Module.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.melting.executor": "Run",
-    "Python.test.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Shell Script.Unnamed.executor": "Run",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/michael/.local/bin/uv",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "uv run.Run Project.executor": "Run",
-    "uv run.Unnamed.executor": "Run",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.Game_State.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Initialise and Event Handler.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ProjectMain.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Time_Module.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.melting.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Shell Script.Run Project.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/michael/.local/bin/uv&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;uv run.Run Project.executor&quot;: &quot;Run&quot;,
+    &quot;uv run.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Shell Script.Run Project">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="PythonProject" />
@@ -252,7 +251,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765052080407</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="uv">
+      <option name="closed" value="true" />
+      <created>1765282524081</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1765282524081</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,6 +269,7 @@
     <MESSAGE value="aaaaaaaaahaaaaaahhh" />
     <MESSAGE value="Yay" />
     <MESSAGE value="wow that was really cool" />
-    <option name="LAST_COMMIT_MESSAGE" value="wow that was really cool" />
+    <MESSAGE value="uv" />
+    <option name="LAST_COMMIT_MESSAGE" value="uv" />
   </component>
 </project>

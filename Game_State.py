@@ -1,13 +1,14 @@
 # ----------------------------------------------------------------------------------------------
-#GAME STATE FUNCTION
+# ----------------------------------------------------------------------------------------------
+# GAME STATE FUNCTION
 import pygame  # imports the pygame library
 import Time_Module
-#CREATE MAIN MENU-------------------------------------------------------------------------------
-def startbutton(White, Black, Window, Font):
 
+
+# CREATE MAIN MENU-------------------------------------------------------------------------------
+def startbutton(White, Black, Window, Font):
     start = pygame.Rect(150, 250, 200, 100)  # Start button, rect(left, top, width, height)
     startborder = pygame.Rect(150, 250, 200, 100)  # starbutton border
-
 
     pygame.draw.rect(Window, White, start, 0)  # draw start button
     pygame.draw.rect(Window, Black, startborder, 10)  # draw a border around startbutton
@@ -16,30 +17,41 @@ def startbutton(White, Black, Window, Font):
     Window.blit(startwords, (160, 290))  # draws text "startwords" on the game window
     return start
 
-def quitbutton(White, Black, Window, Font):
 
+def quitbutton(White, Black, Window, Font):
     close = pygame.Rect(450, 250, 200, 100)  # Quit button
     closeborder = pygame.Rect(450, 250, 200, 100)  # quitbutton border
 
     pygame.draw.rect(Window, White, close, 0)  # draw quit button
     pygame.draw.rect(Window, Black, closeborder, 10)  # draw a border around quit button
 
-    closewords = Font.render("QUIT GAME", False, Black) #creates surface with text
-    Window.blit(closewords, (470, 290)) # draws the closewords surface on surface window with parameters x.y
+    closewords = Font.render("QUIT GAME", False, Black)  # creates surface with text
+    Window.blit(closewords, (470, 290))  # draws the closewords surface on surface window with parameters x.y
 
     return close
 
-def gamestate(State, White, Black, Window, Font):  # is called whenever game over condition may be met, or to launch menu
+
+def gamestate(State, White, Black, Window,
+              Font):  # is called whenever game over condition may be met, or to launch menu
     if State == "Menu":  # creates start or exit buttons once the state is MENU
 
-        titlewords = Font.render("PLATFORMS AND ALIENS", False, White) # creates surface for title screen words
-        Window.blit(titlewords, (225, 100)) # draws title screen words on the screen
+        titlewords = Font.render("PLATFORMS AND ALIENS", False, White)  # creates surface for title screen words
+        Window.blit(titlewords, (225, 100))  # draws title screen words on the screen
+
 
 # Gameover Routine
-#def Gameover():
-    # a surprise tool that'll help us later!!
+def gameover_ui(Window, Font, White, Black, did_win):
+    # a surprise tool that'll help us later!! -> NOW IMPLEMENTED
 
-#CALL GAMEPLAY MODULES # not in use. currently easier to change state at incidence of state change. might use later
-#def setgame():
- #   State = "Game"
-  #  return State
+    if did_win:
+        msg = "YOU WIN! CLICK TO RESTART"
+        color = (0, 255, 0)  # Green
+    else:
+        msg = "GAME OVER! CLICK TO RESTART"
+        color = (255, 0, 0)  # Red
+
+    text_surf = Font.render(msg, True, color)
+    text_rect = text_surf.get_rect(center=(400, 300))
+    Window.blit(text_surf, text_rect)
+
+    return pygame.Rect(0, 0, 800, 600)  # Returns a rect covering screen to detect clicks
