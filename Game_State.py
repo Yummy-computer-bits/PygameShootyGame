@@ -2,7 +2,7 @@
 # ----------------------------------------------------------------------------------------------
 # GAME STATE FUNCTION
 import pygame  # imports the pygame library
-import Time_Module
+import Time_Module  # imports the local Time_Module module
 
 
 # CREATE MAIN MENU-------------------------------------------------------------------------------
@@ -15,7 +15,7 @@ def startbutton(White, Black, Window, Font):
 
     startwords = Font.render("START GAME", False, Black)  # creates surface for "START GAME" to be displayed
     Window.blit(startwords, (160, 290))  # draws text "startwords" on the game window
-    return start
+    return start  # returns the start button rectangle for collision detection
 
 
 def quitbutton(White, Black, Window, Font):
@@ -28,7 +28,7 @@ def quitbutton(White, Black, Window, Font):
     closewords = Font.render("QUIT GAME", False, Black)  # creates surface with text
     Window.blit(closewords, (470, 290))  # draws the closewords surface on surface window with parameters x.y
 
-    return close
+    return close  # returns the quit button rectangle for collision detection
 
 
 def gamestate(State, White, Black, Window,
@@ -43,15 +43,15 @@ def gamestate(State, White, Black, Window,
 def gameover_ui(Window, Font, White, Black, did_win):
     # a surprise tool that'll help us later!! -> NOW IMPLEMENTED
 
-    if did_win:
-        msg = "YOU WIN! CLICK TO RESTART"
+    if did_win:  # checks if the player won
+        msg = "YOU WIN! CLICK TO RESTART"  # sets the victory message
         color = (0, 255, 0)  # Green
-    else:
-        msg = "GAME OVER! CLICK TO RESTART"
+    else:  # if the player lost
+        msg = "GAME OVER! CLICK TO RESTART"  # sets the game over message
         color = (255, 0, 0)  # Red
 
-    text_surf = Font.render(msg, True, color)
-    text_rect = text_surf.get_rect(center=(400, 300))
-    Window.blit(text_surf, text_rect)
+    text_surf = Font.render(msg, True, color)  # renders the text surface with the specific message and colour
+    text_rect = text_surf.get_rect(center=(400, 300))  # centers the text rectangle on the screen
+    Window.blit(text_surf, text_rect)  # draws the text surface onto the window
 
     return pygame.Rect(0, 0, 800, 600)  # Returns a rect covering screen to detect clicks
